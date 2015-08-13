@@ -1,0 +1,161 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="patientappointment.aspx.cs" Inherits="patientappointment" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/validation.js" type="text/javascript"></script>
+     <style>
+     
+     .tbl
+     {
+         font-family:Verdana;
+         font-size:12px;
+     }
+     
+     .tr
+     {
+         background-color:#f0f0f0;
+         height:30px;
+     }
+     .txt
+     {
+          border:1px solid #000;
+          width:200px;
+          height:22px;
+     }
+     
+     .txt:hover
+     {
+         border:2px solid #0C4F9E;
+     }
+          
+   
+        .btn
+     {
+          border:1px solid #000;
+          width:200px;
+          height:22px;
+     }
+     
+     .btn:hover
+     {
+         border:2px solid #0C4F9E;
+         background-color:#EB1C22;
+         color:#fff;
+         cursor:pointer;
+     }       
+          
+     
+     </style>
+
+     <script language="javascript">
+
+         function validateForm() {
+
+             var strAppDate, strAppTime, strMessage
+
+             strAppDate = document.getElementById("txtAppDate").value
+
+             strAppTime = document.getElementById("txtAppTime").value
+
+             if (strAppDate == "") {
+                 setErrorFields("spErrAppDate", "txtAppDate")
+             }
+
+             if (strAppTime == "") {
+                 setErrorFields("spErrAppTime", "txtAppTime")
+             }
+             return false
+
+         }
+     
+     </script>
+</head>
+<body topmargin="0" leftmargin="0">
+    <form id="form1" runat="server">
+     
+
+    <table border="1" cellpadding="2" cellspacing="0" width="100%">
+    
+        
+        <tr class="headerRow">
+            <td align="left" >
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="headerRowLogo"><img src="images/logo.jpg" width="120px" height="120px" /> </td>
+                        <td class="headerRowText"><h1> JP Clinic</h1></td>
+                    </tr>
+                
+                </table>  
+            </td>
+        </tr>
+        <tr class="menuRow">
+            <td align="right" class="menuRowTd" >
+                <span class="menuButton">Welcome nimesh</span> &nbsp; <a href="Default.aspx" class="menuButton">Logout</a>
+            </td>
+        </tr>
+    
+    </table>
+
+
+    <fieldset style="width:400px; margin-left:30%; margin-top:30px; padding:10px ">
+        <legend style="background-color:#EB1C22; color:#fff; padding:8px">Patient Appointment Details </legend>
+       
+            <table cellpadding="4" cellspacing="0" width="80%" border="0"  align="center" class="tbl" >
+    
+    <tr class="tr" >
+        <td nowrap="nowrap">Appointment Date </td>
+        <td>
+        
+          <table cellpadding="0" cellspacing="0">
+                        <td>
+                            <asp:TextBox ID="txtAppDate" runat="server" class="txt"></asp:TextBox>
+                        </td>
+                        <td>
+                            <span id="spErrAppDate" style="color: Red; font-weight: bold; display: none">*</span>
+                        </td>
+                    </table>
+        
+        </td>
+    </tr>
+    
+    <tr class="tr">
+        <td> Appointment Time </td>
+        <td>
+        
+
+          <table cellpadding="0" cellspacing="0">
+                        <td>
+                            <asp:TextBox ID="txtAppTime" runat="server" class="txt"></asp:TextBox>
+                        </td>
+                        <td>
+                            <span id="spErrAppTime" style="color: Red; font-weight: bold; display: none">*</span>
+                        </td>
+                    </table>
+
+        
+        </td>
+    </tr>
+
+    <tr class="tr">
+        <td>Message </td>
+        <td><asp:TextBox ID="txtMessage" TextMode="MultiLine" Height="60px" runat="server" 
+                class="txt"></asp:TextBox></td>
+    </tr>
+
+        <tr class="tr">
+        <td>  </td>
+        <td>
+            <asp:Button ID="Button1" runat="server" Text="Fix Appointment" OnClientClick="return validateForm()"  class="btn" />
+        </td>
+    </tr>
+
+    </table>
+   
+    </fieldset>
+
+    </form>
+</body>
+</html>
