@@ -1,0 +1,43 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    </html>
+    <title></title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+     
+</head>
+<body topmargin="0" leftmargin="0">
+    <form id="form1" runat="server">
+
+
+    <table border="1" cellpadding="2" cellspacing="0" width="100%">
+    
+        
+        <tr class="headerRow">
+            <td align="left" >
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="headerRowLogo"><img src="images/logo.jpg" width="120px" height="120px" /> </td>
+                        <td class="headerRowText"><h1> JP Clinic</h1></td>
+                    </tr>
+                
+                </table>  
+            </td>
+        </tr>
+        <tr class="menuRow">
+            <td align="right" class="menuRowTd" >
+                <a href="registerpatient.aspx" class="menuButton">Register</a> &nbsp; <a href="patientlogin.aspx" class="menuButton">Login</a>
+            </td>
+        </tr>
+    
+    </table>
+
+
+    </form>
+</body>
+</html>
