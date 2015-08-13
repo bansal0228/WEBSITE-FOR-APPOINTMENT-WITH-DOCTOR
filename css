@@ -1,0 +1,74 @@
+ .headerRow
+     {
+      background-color:#0C4F9E; color:#fff ;  
+     }
+    .headerRowLogo
+    {
+        padding-left:100px; padding-top:20px; padding-bottom:20px; width:500px;
+    }
+    .headerRowText
+    {
+        font-size:30px;
+    }
+    .menuRow
+    {
+        background-color:#7896EC;
+    }
+    
+    .menuRowTd
+    {
+        padding-right:200px;
+    }
+    .menuButton
+    {
+         background-color:#EB1C22; padding:10px; color:#fff ;
+    }
+    
+    
+         .tbl
+     {
+         font-family:Verdana;
+         font-size:12px;
+     }
+     
+     .tr
+     {
+         background-color:#f0f0f0;
+         height:30px;
+     }
+     .txt
+     {
+          border:1px solid #000;
+          width:200px;
+          height:22px;
+     }
+     
+     .txt:hover
+     {
+         border:2px solid #0C4F9E;
+     }
+          
+   
+        .btn
+     {
+          border:1px solid #000;
+          width:200px;
+          height:22px;
+     }
+     
+     .btn:hover
+     {
+         border:2px solid #0C4F9E;
+         background-color:#EB1C22;
+         color:#fff;
+         cursor:pointer;
+     }       
+
+.txtErr
+        {
+            border: 1px solid #000;
+            width: 200px;
+            height: 22px;
+            border-bottom: 2px solid red;
+            background-color: #f0f0f0;
+        }
